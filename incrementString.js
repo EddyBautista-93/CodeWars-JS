@@ -25,8 +25,7 @@ const incrementString = (strng) => {
   
   while (str.length < len) {
     str = "0" + str;
-  }
-    
+  }  
  return string.concat(str);
 }
 
