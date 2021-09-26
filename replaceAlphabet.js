@@ -5,8 +5,13 @@
 // "a" = 1, "b" = 2, etc.
 
 const alphabetPosition = (text) => {
-    var newArr = text.split(' ');
-    newArr.forEach(element => {
-        console.log(element)
-    });
+    var result = "";
+    for (var i = 0; i < text.length; i++){
+      var code = text.toUpperCase().charCodeAt(i)
+      if (code > 64 && code < 91) result += (code - 64) + " ";
+    }
+  
+    return result.slice(0, result.length-1);
 }
+
+alphabetPosition("The sunset sets at twelve o' clock.");
