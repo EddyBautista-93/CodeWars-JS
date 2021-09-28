@@ -22,13 +22,15 @@
 // "  *\n ***\n*****\n ***\n  *\n"
 
 const diamond = (n) => {
-    // get the length of the word for the rows we will have for the diamond
-    if(n % 2 == 0 || n < 0)
-    {
-        console.log("not a odd number and/or neg")
+    if (n <= 0 || n % 2 === 0) return null
+    str = ''
+    for (let i = 0; i < n; i++) { 
+      let len = Math.abs((n-2*i-1)/2)
+      str += ' '.repeat(len)
+      str += '*'.repeat(n-2*len)
+      str += '\n'
     }
-
-    return n;
+    return str
 }
 
 diamond(3)
